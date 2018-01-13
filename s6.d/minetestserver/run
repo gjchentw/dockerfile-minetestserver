@@ -4,5 +4,5 @@
 GAMEID=${GAMEID:-"minimal"}
 
 pushd /root > /dev/null
-    exec su-exec minetest:games minetestserver --gameid ${GAMEID}
+    exec su-exec minetest:games minetestserver --config /etc/minetest/minetest.conf --gameid ${GAMEID}
 popd
