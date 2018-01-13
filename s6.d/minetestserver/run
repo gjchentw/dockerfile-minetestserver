@@ -1,0 +1,8 @@
+#!/bin/bash
+[[ -f ./setup ]] && source ./setup
+
+GAMEID=${GAMEID:-"minimal"}
+
+pushd /root > /dev/null
+    exec su-exec minetest:games minetestserver --info --gameid ${GAMEID}
+popd

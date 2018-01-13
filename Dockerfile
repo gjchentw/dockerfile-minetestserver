@@ -6,8 +6,9 @@ RUN	apk --no-cache --no-progress upgrade -f && \
 	apk --no-cache --no-progress add minetest-server && \
 	chown -R minetest:games /var/lib/minetest
 
+COPY	s6.d /etc/s6.d
 
-
+ENV	GAMEID="minimal"
 EXPOSE	30000/udp
-VOLUME	["/var/lib/minetest", "/usr/share/minetest/games"]
-CMD	su-exec minetest:games minetestserver --info --gameid stampy_game
+
+VOLUME	[ "/var/lib/minetest" ]
