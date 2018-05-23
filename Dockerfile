@@ -11,4 +11,3 @@ COPY	s6.d /etc/s6.d
 ENV	GAMEID="minimal"
 EXPOSE	30000/udp
 
-VOLUME	[ "/var/lib/minetest" ]
