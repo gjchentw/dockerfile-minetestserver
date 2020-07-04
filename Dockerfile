@@ -1,6 +1,4 @@
-FROM gjchen/alpine:3.8
-MAINTAINER gjchen <gjchen.tw@gmail.com>
-
+FROM gjchen/alpine:latest
 
 RUN	apk --no-cache --no-progress upgrade -f && \
 	apk --no-cache --no-progress add minetest-server && \
